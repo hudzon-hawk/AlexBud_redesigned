@@ -222,6 +222,19 @@ body {
     letter-spacing: 0.025rem;
 }
 
+.language__button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1875rem;
+    color: #ffffff49;
+    transition: color 0.3s;
+}
+
+.language__button a:hover {
+    opacity: 0.4;
+
+}
+
 .header__button:hover {
     background-color: #e6575c;
     transition: background-color 0.3s;
