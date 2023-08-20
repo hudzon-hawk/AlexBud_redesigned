@@ -825,7 +825,7 @@ body {
     }
 
     .footer_text {
-        font-size: 0.625rem;
+        font-size: 1.875rem;
 
     }
 
@@ -835,6 +835,6 @@ body {
     }
 
     .footer__logo p {
-        font-size: 0.5rem;
+        font-size: 1.2rem;
     }
 }
