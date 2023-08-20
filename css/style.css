@@ -647,8 +647,6 @@ body {
     justify-content: center;
 }
 
-.projects__content {}
-
 .projects_gallery__title {
     padding: 0.3125rem;
     position: relative;
@@ -751,8 +749,6 @@ body {
 .footer__container {
     position: relative;
 }
-
-.footer__logo {}
 
 .footer-section__content {
     display: flex;
