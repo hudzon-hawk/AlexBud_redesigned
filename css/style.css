@@ -1,0 +1,786 @@
+/*Обнулення*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+    font-family: 'Font_Awesome';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fa-regular-400.woff2') format('woff2'),
+        url('../fonts/fa-regular-400.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font_Awesome';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/fa-solid-900.woff2') format('woff2'),
+        url('../fonts/fa-solid-900.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BankGothic Md BT';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/BankGothic Md BT.ttf') format('truetype');
+}
+
+
+body {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 1.125rem;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Загальні стилі */
+.page {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    /* Обмежуючий контейнер + відступи */
+    max-width: 100rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    margin: 0 auto;
+}
+
+/* Модулі */
+.title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+/* Стилі шапки */
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+.header__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5.625rem;
+    min-width: 21.875rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    backdrop-filter: blur(5px);
+}
+
+.logo__image {
+    max-width: 3.125rem;
+    max-height: 3.125rem;
+}
+
+.header__logo {
+    overflow: hidden;
+    max-width: 18.125em;
+    gap: 0.3125rem;
+    display: flex;
+    align-items: center;
+    font-family: 'BankGothic Md BT';
+    font-weight: 500;
+    letter-spacing: 0.125rem;
+    font-size: 3rem;
+}
+
+.text_logo2 {
+    color: #E11B22;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    column-gap: 2.8125rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 2.25rem;
+    row-gap: 0.3125rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.menu__link {
+    color: #FFF;
+    text-shadow: #000 0.0625rem 0 0.125rem;
+
+}
+
+.menu__link:hover {
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.header__button {
+    display: inline-flex;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #E11B22;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.025rem;
+}
+
+.header__button:hover {
+    background-color: #e6575c;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 41.875em) {
+    .header__logo {
+        flex: 0 0 3.125rem;
+    }
+
+    .header__body {
+        column-gap: 1.875rem;
+    }
+
+    .menu__list {
+        column-gap: 1.5625rem;
+        font-size: 1.25rem;
+    }
+
+    .header__button {
+        padding: 10px 14px;
+    }
+}
+
+/* Головна секція */
+
+.main-section__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+
+}
+
+.main-section__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.7;
+
+}
+
+.main-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.main-section__container {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 130px;
+    padding-bottom: 1.875rem;
+}
+
+.main-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 41.875rem;
+    max-height: 14.875rem;
+    justify-content: space-evenly;
+}
+
+.main-section__label {
+    text-overflow: clip;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 4rem;
+    letter-spacing: 0.3125rem;
+}
+
+.main-section__title {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+/*Група контактних кнопок*/
+.contact_buttons {
+    padding-top: 2.625rem;
+    padding-bottom: 8.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.contact_buttons button {
+    padding: 0.75rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.request_estimate_button {
+    background-color: #E11B22;
+    color: #FFF;
+
+}
+
+.view_services_button {
+    background-color: transparent;
+    color: #FFF;
+    border: 0.125rem solid #FFF;
+}
+
+/* Типи робіт */
+.work_type__container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+}
+
+.work_type_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFF;
+    border-radius: 0.625rem;
+    padding: 3.0625rem 0.0625rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.20);
+}
+
+.work_type_logo {
+    width: 75px;
+    height: 60px;
+    padding-bottom: 0.3125rem;
+}
+
+.work_type_text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 41.875em) {
+
+    .main-section__container {
+        padding-top: 5.625rem;
+        width: 100%;
+    }
+
+    .main-section__content {
+        width: 20rem;
+        height: 9.375rem;
+    }
+
+    .main-section__label {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 3.125rem;
+        letter-spacing: 0.125rem;
+    }
+
+    .main-section__title {
+        font-size: 1rem;
+    }
+
+    .contact_buttons {
+        flex-direction: column;
+        padding-top: 1.25rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .contact_buttons button {
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 0.5rem;
+    }
+
+    .work_type__container {
+
+        gap: 0.625rem;
+    }
+
+    .work_type_block {
+        align-items: center;
+        justify-content: space-around;
+        background-color: #FFF;
+        border-radius: 0.625rem;
+        padding: 0.9375rem 0.625rem;
+        width: 6.25rem;
+        height: 6.25rem;
+        box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    .work_type_logo {
+        width: 2.5rem;
+        height: 2rem;
+    }
+
+    .work_type_text {
+        font-size: 0.71rem;
+        font-weight: 400;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Секція About*/
+
+/* Слайдер */
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-initialized {
+    touch-action: pan-y;
+}
+
+.slider-about__wrapper {
+    display: flex;
+    box-sizing: content-box;
+}
+
+.slider-about__slide {
+    aspect-ratio: 675 / 610;
+    position: relative;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.about__slider {
+    position: relative;
+    max-width: 38.75rem;
+    justify-self: end;
+}
+
+.slider-about__pagination {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5625rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.slider-about__pagination .swiper-pagination-bullet {
+    flex: 0 0 0.5rem;
+    height: 8px;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.slider-about__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* About контент*/
+
+.page__about {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(217, 217, 217, 1);
+}
+
+.about-section__image img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+}
+
+.about__container {
+    z-index: 10;
+    position: relative;
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.about__content {
+    min-width: 28.125rem;
+    padding: 4.375rem 1.25rem 1.875rem;
+}
+
+.about__title {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+
+.about__text {
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-align: justify;
+}
+
+.about__text p {
+    padding-bottom: 2.5rem;
+    text-indent: 1.25rem;
+}
+
+@media (max-width: 66.875em) {
+    .about__container {
+        gap: 0.3125rem;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        min-width: 18.75rem;
+        width: 100%;
+        margin: 0;
+        padding: 0.3125rem;
+    }
+
+    .about__content {
+        padding: 1.875rem 0.9375rem 0.9375rem 0.3125rem;
+        min-width: 18.75rem;
+        justify-self: left;
+        width: 100%;
+        gap: 0.3125rem;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+    }
+
+    .about__slider {
+        position: relative;
+        width: 100%;
+        justify-self: end;
+    }
+
+    .about__text {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        text-align: justify;
+    }
+
+    .about__text p {
+        padding-bottom: 0.9375rem;
+        text-indent: 0.9375rem;
+    }
+}
+
+/* Секція Реалізації */
+.gallery__item {
+    margin: 0.625rem;
+}
+
+.projects__title {
+    z-index: 3;
+    padding: 2.5rem;
+    position: relative;
+    text-align: center;
+    color: #FFF;
+    font-size: 2.5rem;
+
+}
+
+.page__projects {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects__content {}
+
+.projects_gallery__title {
+    padding: 0.3125rem;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    color: #FFF;
+    font-size: 1.25rem;
+}
+
+.projects_gallery__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects-section__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 1);
+}
+
+.projects-section__image img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+}
+
+/* Gallery Slider */
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-initialized {
+    touch-action: pan-y;
+}
+
+.slider-projects__wrapper {
+    display: flex;
+    box-sizing: content-box;
+}
+
+.slider-projects__slide {
+    aspect-ratio: 800 / 530;
+    position: relative;
+    opacity: 1;
+    width: 100%;
+    height: 28.1875rem;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+.projects-slider {
+    max-width: 38.75rem;
+    position: relative;
+    justify-self: end;
+}
+
+.slider-projects__pagination {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5625rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.slider-projects__pagination .swiper-pagination-bullet {
+    flex: 0 0 0.5rem;
+    height: 8px;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.slider-projects__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/*Футер*/
+.footer {
+    background-color: rgba(241, 241, 241, 0.808);
+}
+
+.footer__container {
+    position: relative;
+}
+
+.footer__logo {}
+
+.footer-section__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section-content__logo {
+    width: 3.125rem;
+    height: auto;
+}
+
+.footer-section__block {
+    padding: 0.625rem 1.875rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+    align-items: center;
+
+}
+
+.footer_text {
+    display: block;
+}
+
+.footer__logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
