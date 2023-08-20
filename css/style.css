@@ -89,21 +89,6 @@ h6 {
 }
 
 /*--------------------*/
-@font-face {
-    font-family: 'Font_Awesome';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/fa-regular-400.woff2') format('woff2'),
-        url('../fonts/fa-regular-400.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Font_Awesome';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/fa-solid-900.woff2') format('woff2'),
-        url('../fonts/fa-solid-900.ttf') format('truetype');
-}
 
 @font-face {
     font-family: 'BankGothic Md BT';
@@ -114,7 +99,7 @@ h6 {
 
 
 body {
-    font-family: "Poppins";
+    font-family: "Montserrat";
     font-style: normal;
     font-size: 1.125rem;
 }
@@ -142,7 +127,7 @@ body {
 /* Модулі */
 .title {
     color: #000;
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
@@ -230,7 +215,7 @@ body {
     border-radius: 8px;
     background: #E11B22;
     color: #FFF;
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.25rem;
@@ -315,7 +300,7 @@ body {
     text-overflow: clip;
     color: #FFF;
     text-align: center;
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 4.5rem;
     font-style: normal;
     font-weight: 800;
@@ -326,7 +311,7 @@ body {
 .main-section__title {
     color: #FFF;
     text-align: center;
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
