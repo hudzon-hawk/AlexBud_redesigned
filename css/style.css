@@ -102,6 +102,7 @@ body {
     font-family: "Montserrat";
     font-style: normal;
     font-size: 1.125rem;
+    background-color: #000;
 }
 
 .wrapper {
@@ -126,7 +127,7 @@ body {
 
 /* Модулі */
 .title {
-    color: #000;
+    color: #FFF;
     font-family: Montserrat;
     font-size: 1.5rem;
     font-style: normal;
@@ -141,43 +142,61 @@ body {
     left: 0;
     top: 0;
     z-index: 50;
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color: #000;
 }
 
 .header__container {
+    position: relative;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
     min-height: 5.625rem;
     min-width: 21.875rem;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    backdrop-filter: blur(5px);
+    padding-top: 10px;
+    padding-bottom: 0.125rem;
 }
 
 .logo__image {
-    max-width: 3.125rem;
-    max-height: 3.125rem;
+    max-height: 70px;
 }
 
 .header__logo {
     overflow: hidden;
-    max-width: 18.125em;
     gap: 0.3125rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-family: 'BankGothic Md BT';
     font-weight: 500;
-    letter-spacing: 0.125rem;
-    font-size: 3rem;
+    letter-spacing: 1px;
+    font-size: 2.1875rem;
+    text-align: center;
 }
 
-.text_logo2 {
-    color: #E11B22;
+.text_logo {
+    text-transform: uppercase;
+    color: #ef7f1a;
+}
+
+.text_logo_service {
+    font-size: 1.25rem;
+    color: #FFF;
+
+}
+
+.text_logo_tel {
+    font-size: 1.25rem;
+    color: #ef7f1a;
 }
 
 .header__body {
+    padding: 3px 0;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(239, 127, 26, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    color: #000;
     display: flex;
     align-items: center;
     column-gap: 2.8125rem;
@@ -196,49 +215,36 @@ body {
 }
 
 .menu__link {
-    color: #FFF;
-    text-shadow: #000 0.0625rem 0 0.125rem;
-
+    color: #000;
+    font-weight: 600;
+    transition: color 0.5s;
 }
 
 .menu__link:hover {
-    color: #000000;
-    transition: color 0.3s;
+    color: #444444;
+    text-shadow: 0.5px 0.5px 2px #FFF;
 }
 
-.header__button {
-    display: inline-flex;
-    padding: 0.75rem 1rem;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 8px;
-    background: #E11B22;
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    letter-spacing: 0.025rem;
-}
 
 .language__button {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1875rem;
-    color: #ffffff49;
-    transition: color 0.3s;
+    font-size: 1.2rem;
+    color: #ef7f1a;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.language-icon {
+    color: #FFF;
 }
 
 .language__button a:hover {
-    opacity: 0.4;
-
+    color: #ef7f1a;
+    text-shadow: 0.5px 0.5px 1px #FFF;
 }
 
-.header__button:hover {
-    background-color: #e6575c;
-    transition: background-color 0.3s;
-}
+
 
 @media (max-width: 41.875em) {
     .header__logo {
@@ -260,27 +266,6 @@ body {
 }
 
 /* Головна секція */
-
-.main-section__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #000;
-
-}
-
-.main-section__image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    opacity: 0.7;
-
-}
 
 .main-section {
     min-height: 100vh;
