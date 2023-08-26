@@ -267,179 +267,60 @@ body {
 
 /* Головна секція */
 
-.main-section {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
+
+.page__about {
+    background-color: #000;
 }
 
-.main-section__container {
-    position: relative;
-    z-index: 2;
-    flex: 1 1 auto;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 130px;
-    padding-bottom: 1.875rem;
-}
-
-.main-section__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 41.875rem;
-    max-height: 14.875rem;
-    justify-content: space-evenly;
-}
-
-.main-section__label {
-    text-overflow: clip;
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 4.5rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 4rem;
-    letter-spacing: 0.3125rem;
-}
-
-.main-section__title {
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.25rem;
-}
-
-/*Група контактних кнопок*/
-.contact_buttons {
-    padding-top: 2.625rem;
-    padding-bottom: 8.25rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.contact_buttons button {
-    padding: 0.75rem 1rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-    border-radius: 0.5rem;
-}
-
-.request_estimate_button {
-    background-color: #E11B22;
-    color: #FFF;
-
-}
-
-.view_services_button {
-    background-color: transparent;
-    color: #FFF;
-    border: 0.125rem solid #FFF;
-}
-
-/* Типи робіт */
-.work_type__container {
-    display: flex;
-    flex-direction: row;
-    gap: 1.875rem;
-}
-
-.work_type_block {
+.about__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: #FFF;
-    border-radius: 0.625rem;
-    padding: 3.0625rem 0.0625rem;
-    width: 12.5rem;
-    height: 12.5rem;
-    box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.20);
+
 }
 
-.work_type_logo {
-    width: 75px;
-    height: 60px;
-    padding-bottom: 0.3125rem;
+.section_logo__text_square {
+
+    --b: 1px;
+    /* thickness of the border */
+    --c: #ef7f1a;
+    /* color of the border */
+    --w: 15px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+
+    /*Irrelevant code*/
+    min-width: 3.75rem;
+    max-width: max-content;
+    max-height: max-content;
+    box-sizing: border-box;
+    margin: 5px;
+    display: inline-flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    line-height: 90px;
+
+
 }
 
-.work_type_text {
-    font-size: 1.2rem;
+.section_logo_text {
+    margin: 5px 20px;
+    font-size: 1.5625rem;
+    line-height: 1.2rem;
     font-weight: 500;
-    text-align: center;
-    width: 100%;
-}
-
-@media (max-width: 41.875em) {
-
-    .main-section__container {
-        padding-top: 5.625rem;
-        width: 100%;
-    }
-
-    .main-section__content {
-        width: 20rem;
-        height: 9.375rem;
-    }
-
-    .main-section__label {
-        font-size: 2.5rem;
-        font-weight: 700;
-        line-height: 3.125rem;
-        letter-spacing: 0.125rem;
-    }
-
-    .main-section__title {
-        font-size: 1rem;
-    }
-
-    .contact_buttons {
-        flex-direction: column;
-        padding-top: 1.25rem;
-        padding-bottom: 2.5rem;
-    }
-
-    .contact_buttons button {
-        padding: 8px 12px;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 0.5rem;
-    }
-
-    .work_type__container {
-
-        gap: 0.625rem;
-    }
-
-    .work_type_block {
-        align-items: center;
-        justify-content: space-around;
-        background-color: #FFF;
-        border-radius: 0.625rem;
-        padding: 0.9375rem 0.625rem;
-        width: 6.25rem;
-        height: 6.25rem;
-        box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.20);
-    }
-
-    .work_type_logo {
-        width: 2.5rem;
-        height: 2rem;
-    }
-
-    .work_type_text {
-        font-size: 0.6563rem;
-        font-weight: 400;
-        overflow-wrap: break-word;
-    }
+    color: #ef7f1a;
+    text-transform: uppercase;
 }
 
 /* Секція About*/
@@ -504,35 +385,15 @@ body {
 /* About контент*/
 
 .page__about {
-    position: relative;
     align-items: center;
     justify-content: center;
-}
-
-.about-section__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(217, 217, 217, 1);
-}
-
-.about-section__image img {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    opacity: 0.3;
-    mix-blend-mode: overlay;
 }
 
 .about__container {
     z-index: 10;
     position: relative;
     display: grid;
+    grid: 2fr 1fr 1fr;
     margin: auto;
     justify-content: center;
     align-items: center;
