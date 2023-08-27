@@ -115,6 +115,7 @@ body {
 /* Загальні стилі */
 .page {
     flex: 1 1 auto;
+    position: relative;
 }
 
 [class*="__container"] {
@@ -267,16 +268,52 @@ body {
 
 /* Головна секція */
 
+/* About контент*/
 
 .page__about {
+    max-height: fit-content;
+    padding-top: 9.4831rem;
     background-color: #000;
 }
 
 .about__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template:
+        "a a" max-content
+        "b c" max-content / 1fr 1fr;
+    margin: auto;
+    justify-content: center;
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
 
+.about__content {
+    align-self: center;
+    grid-area: c;
+    color: #FFF;
+    min-width: 28.125rem;
+    padding: 30px 20px 30px;
+}
+
+.about__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+
+.about__text {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-align: justify;
+}
+
+.about__text p {
+    padding-bottom: 2.5rem;
+    text-indent: 1.25rem;
 }
 
 .section_logo__text_square {
@@ -306,24 +343,40 @@ body {
     box-sizing: border-box;
     margin: 5px;
     display: inline-flex;
-    font-size: 30px;
+    font-size: 2.5rem;
     justify-content: center;
     align-items: center;
     line-height: 90px;
+}
 
-
+.section-about-title {
+    grid-area: a;
+    justify-self: center;
 }
 
 .section_logo_text {
+    padding: 10px;
     margin: 5px 20px;
-    font-size: 1.5625rem;
     line-height: 1.2rem;
     font-weight: 500;
     color: #ef7f1a;
     text-transform: uppercase;
 }
 
-/* Секція About*/
+.about_gallery__title {
+    padding: 0.3125rem;
+    padding-right: 50px;
+    position: absolute;
+    bottom: 45px;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+    z-index: 5;
+    background: linear-gradient(to right, #ef7f1a 85%, #ef7d1a00);
+    color: #000000;
+
+}
+
 
 /* Слайдер */
 .swiper {
@@ -351,6 +404,7 @@ body {
 }
 
 .about__slider {
+    grid-area: b;
     position: relative;
     max-width: 38.75rem;
     justify-self: end;
@@ -382,51 +436,6 @@ body {
     opacity: 1;
 }
 
-/* About контент*/
-
-.page__about {
-    align-items: center;
-    justify-content: center;
-}
-
-.about__container {
-    z-index: 10;
-    position: relative;
-    display: grid;
-    grid: 2fr 1fr 1fr;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-}
-
-.about__content {
-    min-width: 28.125rem;
-    padding: 4.375rem 1.25rem 1.875rem;
-}
-
-.about__title {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 2.5rem;
-    text-align: center;
-    padding-bottom: 1.25rem;
-}
-
-.about__text {
-    color: #000;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 1.875rem;
-    text-align: justify;
-}
-
-.about__text p {
-    padding-bottom: 2.5rem;
-    text-indent: 1.25rem;
-}
 
 @media (max-width: 66.875em) {
     .about__container {
@@ -470,9 +479,48 @@ body {
     }
 }
 
+/*Секція Послуги*/
+.services__container {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__content {
+    font-family: BankGothic Md BT;
+    text-align: center;
+    font-size: 2.8125rem;
+    letter-spacing: 0.1875rem;
+    line-height: 3.4375rem;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.services__text {}
+
 /* Секція Реалізації */
+.page__projects {
+    padding-top: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects_gallery__container {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
 .gallery__item {
     margin: 0.625rem;
+    grid-area: slider;
 }
 
 .projects__title {
@@ -485,46 +533,16 @@ body {
 
 }
 
-.page__projects {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
 .projects_gallery__title {
     padding: 0.3125rem;
-    position: relative;
-    text-align: center;
-    z-index: 5;
-    color: #FFF;
-    font-size: 1.25rem;
-}
-
-.projects_gallery__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.projects-section__image {
+    padding-right: 3.125rem;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(51, 51, 51, 1);
-}
-
-.projects-section__image img {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    opacity: 0.3;
-    mix-blend-mode: overlay;
+    text-align: left;
+    font-weight: 500;
+    z-index: 5;
+    background: linear-gradient(to right, #ef7f1a 85%, #ef7d1a00);
+    color: #000000;
+    font-size: 1.25rem;
 }
 
 /* Gallery Slider */
@@ -587,7 +605,7 @@ body {
 
 /*Футер*/
 .footer {
-    background-color: rgba(241, 241, 241, 0.808);
+    padding-top: 2.5rem;
 }
 
 .footer__container {
@@ -596,7 +614,7 @@ body {
 
 .footer-section__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -607,12 +625,29 @@ body {
 }
 
 .footer-section__block {
-    padding: 0.625rem 1.875rem;
-    display: flex;
-    flex-direction: row;
-    gap: 0.625rem;
-    align-items: center;
+    margin: 0.625rem;
+}
 
+.footer_text_tel a {
+    color: #FFF;
+    font-family: "BankGothic Md BT", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.footer_text_mail a {
+    color: #ef7f1a;
+    font-family: "BankGothic Md BT", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0.625rem 1.875rem;
+}
+
+.footer_text_fb a {
+    color: #FFF;
+    font-family: "BankGothic Md BT", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .footer_text {
@@ -620,8 +655,26 @@ body {
 }
 
 .footer__logo {
+    font-size: 1rem;
+    color: #FFF;
     position: static;
     text-align: end;
+}
+
+.footer-section__block a:hover {
+    text-decoration: underline;
+}
+
+.footer__logo a {
+    color: #ef7f1a;
+    position: static;
+    text-align: end;
+}
+
+.footer__logo a:hover {
+    color: #ffa454;
+    text-decoration: underline;
+
 }
 
 @media (max-width: 34.375em) {
