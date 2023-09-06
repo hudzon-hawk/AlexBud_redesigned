@@ -213,12 +213,12 @@ body {
     grid-template-columns: 0.5fr 0.55fr;
     grid-template-rows: repeat(3, 27px) 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 3px;
 }
 
 .logo__image {
     justify-self: end;
-    max-height: 70px;
+    max-height: 100px;
     grid-area: 1 / 1 / 4 / 2;
     margin-right: 0.9375rem;
 }
@@ -227,7 +227,7 @@ body {
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
-    font-size: 2.1875rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     justify-content: center;
     color: #ef7f1a;
@@ -236,19 +236,20 @@ body {
 
 .text_logo_service {
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: #FFF;
     grid-area: 2 / 2 / 3 / 3;
 }
 
 .text_logo_tel {
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: #ef7f1a;
     grid-area: 3 / 2 / 4 / 3;
 }
 
 .nav_buttons {
+    padding: 5px;
     grid-area: 4 / 1 / 5 / 3;
     display: flex;
     flex-direction: row;
@@ -257,7 +258,7 @@ body {
 }
 
 .menu__link {
-    font-size: 1rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -285,14 +286,64 @@ body {
     border-right: #ef7f1a solid 2px;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 41.875em) {
+/* новий грід для шапки */
 
+    .header__container {
+        padding-left: 5px;
+        padding-right: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .logo__image { 
+            grid-area: 1 / 1 / 4 / 2; 
+            max-width: 100px;
+        }
+        .text_logo {
+            font-size: 2rem;
+             grid-area: 1 / 2 / 2 / 3; }
+        .text_logo_service {
+            font-size: 1.1rem;
+            grid-area: 2 / 2 / 3 / 3; }
+        .text_logo_tel {
+            font-size: 1.1rem;
+            grid-area: 3 / 2 / 4 / 3; }
+        .language_buttons { 
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            grid-area: 1 / 3 / 4 / 4; }
+        .nav_buttons {
+         
+            background: linear-gradient(90deg, rgba(239,127,26,0.10407913165266103) 0%, rgba(239,127,26,1) 5%, rgba(239,127,26,1) 50%, rgba(239,127,26,1) 95%, rgba(239,127,26,0.053658963585434205) 100%);
+            grid-area: 4 / 1 / 5 / 4; }
+        .menu__link{
+            
+                font-size: 1rem;
+            }
+            .language-icon{
+                font-size: 0.9rem;
+            padding: 5px;
+            }
+        #language_button_uk {
+                padding: 5px;
+                border: 0;
+            }
+
+
+/* старий грід для шапки 
     .nav_buttons {
         display: grid;
+        padding: 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 2.1875rem);
-        background: linear-gradient(to top, #ef7f1a 85%, #ef7d1a00);
+        background: linear-gradient(rgba(239,127,26,0.10407913165266103) 0%, rgba(239,127,26,1) 10%, rgba(239,127,26,1) 50%, rgba(239,127,26,1) 90%, rgba(239,127,26,0.053658963585434205) 100%);
         grid-area: 2 / 2 / 4 / 4;
+        border-radius: 10px;
     }
 
 
@@ -300,7 +351,7 @@ body {
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-columns: fit-content(5rem) repeat(2, 1fr) 2.1875rem;
+        grid-template-columns: fit-content(1fr) repeat(2, 1fr) 2.1875rem;
         grid-template-rows: repeat(3, 2.1875rem);
         grid-column-gap: 0.1875rem;
         grid-row-gap: 2px;
@@ -308,7 +359,7 @@ body {
 
 
     .logo__image {
-        max-width: 5rem;
+        max-width: 100px;
         grid-area: 1 / 1 / 4 / 2;
     }
 
@@ -317,13 +368,15 @@ body {
     }
 
     .menu__link {
-        font-size: 1rem;
+        font-size: 0.9rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        border: #000 solid 1px;
+        padding: 5px;
     }
 
     .language_buttons {
@@ -350,6 +403,7 @@ body {
         display: none;
     }
 }
+кінець старого гріда */
 
 /* Головна секція */
 
