@@ -640,8 +640,6 @@ body {
     color: #FFF;
 }
 
-.services__text {}
-
 /* Секція Реалізації */
 .page__projects {
     padding-top: 2.5rem;
@@ -863,4 +861,5 @@ body {
     .footer__logo {
         font-size: 0.7rem;
     }
+}
 }
