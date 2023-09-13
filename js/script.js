@@ -2,7 +2,8 @@ var swiper = new Swiper('.about__slider', {
     loop: true,
     pagination: {
         el: '.swiper-pagination',
-        clickable: true
+        clickable: true,
+        slideToClickedSlide: false
     },
 
 });
