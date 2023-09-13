@@ -7,71 +7,37 @@ var swiper = new Swiper('.about__slider', {
 
 });
 
-
-var swiper = new Swiper('.projects__slider1', {
+var swiper = new Swiper('.project-all-slider', {
+    direction: 'horizontal',
     loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
+    freeMode: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 20,
+        stretch: 50,
+        slideShadows: true,
     },
 });
 
-
-var swiper = new Swiper('.projects__slider2', {
+var swiper = new Swiper('.project-image-slider', {
+    direction: 'horizontal',
     loop: true,
     pagination: {
         el: '.slider-projects__pagination',
-        clickable: true
+        clickable: true,
+        dynamicBullets: true,
+    },
+    freeMode: true,
+    speed: 800,
+    effect: 'fade',
+    nested: true,
+    fadeEffect: {
+        crossFade: true
     },
 });
-
-
-
-var swiper = new Swiper('.projects__slider3', {
-    loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
-    },
-});
-
-
-
-var swiper4 = new Swiper('.projects__slider4', {
-    loop: true,
-    pagination: {
-        el: '..slider-projects__pagination',
-        clickable: true
-    },
-});
-
-var swiper4 = new Swiper('.projects__slider5', {
-    loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
-    },
-});
-
-var swiper4 = new Swiper('.projects__slider6', {
-    loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
-    },
-});
-
-var swiper4 = new Swiper('.projects__slider7', {
-    loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
-    },
-});
-var swiper4 = new Swiper('.projects__slider8', {
-    loop: true,
-    pagination: {
-        el: '.slider-projects__pagination',
-        clickable: true
-    },
-}); 
