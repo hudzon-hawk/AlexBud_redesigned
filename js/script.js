@@ -18,6 +18,19 @@ var swiper = new Swiper('.project-all-slider', {
         prevEl: '.swiper-button-prev'
     },
     effect: 'coverflow',
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+
+        },
+        1300: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        1400: {
+            slidesPerView: 3,
+        }
+    },
     coverflowEffect: {
         rotate: 20,
         stretch: 50,
