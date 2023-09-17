@@ -694,6 +694,13 @@ body {
 @media (max-width: 48em)
 /*768px*/
     {
+
+    .text_logo,
+    .text_logo_service,
+    .text_logo_tel {
+        line-height: 0.5;
+    }
+
     .header__container {
         padding-left: 5px;
         padding-right: 5px;
@@ -750,7 +757,7 @@ body {
     }
 
     .page__about {
-        padding-top: 12.5rem;
+        padding-top: 10rem;
     }
 
     .swiper {
@@ -783,7 +790,7 @@ body {
     }
 
     .page__about {
-        padding-top: 12.5rem;
+        padding-top: 8.125rem;
     }
 
     .swiper {
@@ -831,7 +838,7 @@ body {
     }
 
     .page__about {
-        padding-top: 12.5rem;
+        padding-top: 9.375rem;
     }
 
     .swiper {
@@ -842,11 +849,13 @@ body {
 @media (max-width: 28.125em)
 /*450px*/
     {
-        .text_logo,
-        .text_logo_service,
-        .text_logo_tel {
-            width: 16.875rem;
-        }
+
+    .text_logo,
+    .text_logo_service,
+    .text_logo_tel {
+        width: 16.875rem;
+    }
+
     .header__container {
         grid-template-columns: 120px 1fr 40px;
     }
@@ -880,7 +889,7 @@ body {
     }
 
     .page__about {
-        padding-top: 10.625rem;
+        padding-top: 8.125rem;
     }
 
 }
@@ -923,6 +932,6 @@ body {
     }
 
     .page__about {
-        padding-top: 9.6875rem;
+        padding-top: 7.5rem;
     }
 }
