@@ -768,7 +768,7 @@ body {
     .text_logo,
     .text_logo_service,
     .text_logo_tel {
-        width: 18.75rem;
+        width: 21.875rem;
     }
 
     .text_logo_service,
@@ -803,12 +803,12 @@ body {
     .text_logo,
     .text_logo_service,
     .text_logo_tel {
-        width: 17.5rem;
+        width: 18.75rem;
     }
 
     .text_logo_service,
     .text_logo_tel {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .footer-section__content {
