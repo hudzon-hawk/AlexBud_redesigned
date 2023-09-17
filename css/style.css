@@ -765,13 +765,21 @@ body {
         grid-template-columns: 150px 1fr 40px;
     }
 
+    .text_logo,
+    .text_logo_service,
+    .text_logo_tel {
+        width: 18.75rem;
+    }
+
     .text_logo_service,
     .text_logo_tel {
         font-size: 1.7rem;
+
     }
 
     .logo__image {
         max-width: 8.125rem;
+        margin-right: 0.3125rem;
     }
 
     .page__about {
@@ -785,7 +793,24 @@ body {
 
 @media (max-width: 28.75rem)
 /*460px*/
+
     {
+    .logo__image {
+        max-width: 9.375rem;
+
+    }
+
+    .text_logo,
+    .text_logo_service,
+    .text_logo_tel {
+        width: 17.5rem;
+    }
+
+    .text_logo_service,
+    .text_logo_tel {
+        font-size: 1.6rem;
+    }
+
     .footer-section__content {
         display: flex;
         flex-direction: column;
@@ -822,7 +847,8 @@ body {
     }
 
     .logo__image {
-        max-width: 110px;
+        max-width: 6.875rem;
+        margin-right: 0.3125rem;
     }
 
     .text_logo {
@@ -858,12 +884,20 @@ body {
 @media (max-width: 396px)
 /*396px*/
     {
+
+    .text_logo,
+    .text_logo_service,
+    .text_logo_tel {
+        width: 230px;
+    }
+
     .header__container {
         grid-template-columns: 100px 1fr 40px;
     }
 
     .logo__image {
         max-width: 95px;
+
     }
 
     .text_logo {
