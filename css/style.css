@@ -94,7 +94,7 @@ h6 {
     font-family: 'BankGothic Md BT';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/BankGothic Md BT.ttf') format('truetype');
+    src: url('../fonts/BankGothic\ Md\ BT.ttf') format('truetype');
 }
 
 
@@ -189,22 +189,15 @@ body {
     text-shadow: 0.5px 0.5px 2px #FFF;
 }
 
-.language__button {
-    font-size: 1.2rem;
-    color: #ef7f1a;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: all 0.5s;
-}
-
 .language-icon {
-    color: #FFF;
+    margin: 3px;
+    border-radius: 5px;
+    width: 2.5rem;
+    border: none;
 }
 
 .language-icon:hover {
-    color: #ef7f1a;
-    text-shadow: 0.5px 0.5px 1px #FFF;
+    border: 2px solid #ef7f1a;
 }
 
 .header__container {
@@ -225,6 +218,8 @@ body {
 
 .text_logo {
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
+    width: 25rem;
+    text-align: center;
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 2.5rem;
@@ -235,6 +230,8 @@ body {
 }
 
 .text_logo_service {
+    width: 25rem;
+    text-align: center;
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
     font-size: 2rem;
     color: #FFF;
@@ -242,6 +239,8 @@ body {
 }
 
 .text_logo_tel {
+    width: 25rem;
+    text-align: center;
     font-family: 'BankGothic Md BT', Arial, Helvetica, sans-serif;
     font-size: 2rem;
     color: #ef7f1a;
@@ -266,7 +265,6 @@ body {
 }
 
 .language_buttons {
-    font-size: 1.25rem;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -274,15 +272,11 @@ body {
     top: 0.625rem;
     width: 150px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     box-sizing: border-box;
 }
 
-#language_button_uk {
-    padding: 0.625rem;
-    border-left: #ef7f1a solid 2px;
-    border-right: #ef7f1a solid 2px;
-}
+
 
 /* Головна секція */
 
@@ -337,14 +331,11 @@ body {
 .section_logo__text_square {
 
     --b: 1px;
-    /* thickness of the border */
     --c: #ef7f1a;
-    /* color of the border */
     --w: 15px;
-    /* width of border */
+
 
     border: var(--b) solid transparent;
-    /* space for the border */
     background:
         linear-gradient(var(--c), var(--c)) top left,
         linear-gradient(var(--c), var(--c)) top left,
@@ -354,7 +345,6 @@ body {
     background-origin: border-box;
     background-repeat: no-repeat;
 
-    /*Irrelevant code*/
     min-width: 3.75rem;
     max-width: max-content;
     max-height: max-content;
@@ -385,7 +375,7 @@ body {
     padding: 0.3125rem;
     padding-right: 3.125rem;
     position: absolute;
-    bottom: 45px;
+    top: 0px;
     text-align: left;
     font-size: 1.3rem;
     font-weight: 500;
@@ -522,7 +512,7 @@ body {
 }
 
 .slider-slider__slide {
-    aspect-ratio: 675 / 610;
+    aspect-ratio: 800 / 600;
     position: relative;
     opacity: 1;
     width: 100%;
@@ -534,7 +524,7 @@ body {
 
 .project-image-slider {
     position: relative;
-    max-width: 38.75rem;
+    max-width: 50rem;
     max-height: 31.25rem;
     justify-self: end;
 }
@@ -617,6 +607,8 @@ body {
 }
 
 .footer_text_fb a {
+    display: none;
+    /* Прибрать коли буде сторінка у Facebook */
     color: #FFF;
     font-family: "BankGothic Md BT", Arial, Helvetica, sans-serif;
     font-size: 2rem;
@@ -753,13 +745,8 @@ body {
     }
 
     .language-icon {
-        font-size: 1.2rem;
-        padding: 5px;
-    }
-
-    #language_button_uk {
-        padding: 5px;
-        border: 0;
+        width: 2.1875rem;
+        margin: 5px;
     }
 
     .page__about {
@@ -856,22 +843,15 @@ body {
     }
 
     .language-icon {
-        font-size: 1.2rem;
-        padding: 4px;
-    }
+        width: 1.875rem;
+        margin: 0.1875rem;
 
-    #language_button_uk {
-        padding: 4px;
-        border: 0;
     }
 
     .page__about {
         padding-top: 10.625rem;
     }
 
-    .swiper {
-        max-width: 437px;
-    }
 }
 
 
