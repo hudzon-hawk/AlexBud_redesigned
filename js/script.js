@@ -25,7 +25,7 @@ var swiper = new Swiper('.project-all-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
-        breakpoints: {
+    breakpoints: {
         320: {
             slidesPerView: 1,
         },
@@ -35,9 +35,6 @@ var swiper = new Swiper('.project-all-slider', {
         1300: {
             slidesPerView: 2,
             spaceBetween: 10,
-        },
-        1400: {
-            slidesPerView: 3,
         }
     },
     effect: 'coverflow',
