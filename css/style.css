@@ -118,7 +118,6 @@ body {
 #projects {
     border-top: 8.125rem solid transparent;
     margin-top: -8.125rem;
-    padding: 15px;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -141,8 +140,8 @@ body {
 [class*="__container"] {
     /* Обмежуючий контейнер + відступи */
     max-width: 100rem;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
     margin: 0 auto;
 }
 
